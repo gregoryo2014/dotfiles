@@ -35,6 +35,14 @@ filetype plugin on
 " Put your non-Plugin stuff after this line
 "
 
+"Setup syntastic
+let g:syntastic_check_on_open=1                   " check for errors when file is loaded
+let g:syntastic_sh_checkers = ['shellcheck']
+let g:syntastic_cs_checkers = ['code_checker']
+let g:syntastic_mode_map={ 'mode': 'active',
+                     \ 'active_filetypes': [],
+                     \ 'passive_filetypes': ['html', 'handlebars'] }
+
 " Powerline setup
 set guifont=DejaVu\ Sans\ Mono\ for\ Powerline\ 9
 set laststatus=2
