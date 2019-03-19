@@ -7,6 +7,12 @@ alias gd='git diff'
 alias go='git checkout '
 alias gk='gitk --all&'
 alias gx='gitx --all'
+
+# Change Mac Address
+C=0
+ether=en0
+alias changemac="sudo su -l root -c \"/sbin/ifconfig $ether ether d4:33:a3:00:00:0$C; /sbin/ifconfig $ether down; C=$(($C+1))\""
+
 # PROMPT
 parse_git_branch() {
         git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
