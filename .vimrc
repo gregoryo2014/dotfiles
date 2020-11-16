@@ -1,4 +1,7 @@
 set background=dark
+set ignorecase
+set smartcase
+set hlsearch
 set encoding=utf-8
 set nocompatible              " be iMproved, required
 filetype off                  " required
