@@ -1,2 +1,3 @@
 # dotfiles
-HPCNow! Development Environment
+
+Clone and run dotfiles.sh to deploy

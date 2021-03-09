@@ -1,10 +1,10 @@
 #!/bin/bash
 git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
-cp .vimrc ~/.vimrc
-cp .gvimrc ~/.gvimrc
+cp "${0%/*}"/.vimrc ~/.vimrc
+cp "${0%/*}"/.gvimrc ~/.gvimrc
 vim +PluginInstall +qall
-cp .alias ~/.alias
-cp -pr .byobu ~/
+cp "${0%/*}"/.alias ~/.alias
+cp -pr "${0%/*}"/.byobu ~/
 echo "test -s ~/.alias && . ~/.alias || true" >> ~/.bashrc
 git config --global alias.co checkout
 git config --global alias.ci commit
